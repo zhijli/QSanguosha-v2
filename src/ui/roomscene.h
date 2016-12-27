@@ -37,9 +37,13 @@ class QSanSelectableItem;
 class EffectAnimation;
 
 #ifndef Q_OS_WINRT
-#include <QDeclarativeEngine>
-#include <QDeclarativeContext>
-#include <QDeclarativeComponent>
+#include <QtQml/QQmlEngine>
+#include <QtQml/QQmlContext>
+#include <QtQml/QQmlComponent>
+
+#define QDeclarativeEngine QQmlEngine
+#define QDeclarativeContext QQmlContext
+#define QDeclarativeComponent QQmlComponent
 #endif
 
 class ScriptExecutor : public QDialog
